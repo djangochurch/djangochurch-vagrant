@@ -55,7 +55,7 @@ sudo sed -e 's/THEME/calm/g' -e 's/PORT/5003/g' /vagrant/upstart-site.conf | sud
 sudo sed -e 's/THEME/house/g' -e 's/PORT/5004/g' /vagrant/upstart-site.conf | sudo tee /etc/init/djangochurch-house.conf >/dev/null
 sudo sed -e 's/THEME/light/g' -e 's/PORT/5005/g' /vagrant/upstart-site.conf | sudo tee /etc/init/djangochurch-light.conf >/dev/null
 
-for THEME in media bold fresh calm house light
+for THEME in bold fresh calm house light
 do
     sudo initctl start djangochurch-$THEME
 done
