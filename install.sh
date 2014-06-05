@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ -d /vagrant/sites ]; then
+    echo "Sites directory already exists - please delete it and try again" >&2
+    echo "Aborting!" >&2
+    exit
+fi
+
 # Install packages needed
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get update
