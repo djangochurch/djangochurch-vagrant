@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Install packages needed
+export DEBIAN_FRONTEND=noninteractive
 sudo apt-get update
 sudo apt-get install --no-install-recommends -y build-essential python2.7-dev python-virtualenv postgresql-9.3 libpq-dev libjpeg-turbo8-dev libtiff5-dev libwebp-dev git
 
